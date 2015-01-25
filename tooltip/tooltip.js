@@ -18,7 +18,9 @@ $(document).keypress(function(e){
 	if(e.keyCode == 96){
 		console.log(getSelectionText());
 		getDefination(getSelectionText(), function(data){
-			console.log(data[0].text);
+			for (var i = 0; i < data.length; i++) {
+				console.log("> " + data[i].text);
+			};
 		});
 	}
 });
